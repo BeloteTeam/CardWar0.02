@@ -1,7 +1,9 @@
 #tuk shte napravim funkciqta da vikame testeto v display-a i on-click kakvo da pravi + image za testeto
 class Deck:
-	def __init__(self):
-		pass
+
+    def __init__(self):
+        pass
+
 
 #dovurshih ti decka i podredih kartite po sila i sum fixnal kak se pishat na angliiski
 Ace_of_Clubs,Ace_of_Diamonds,Ace_of_Hearts,Ace_of_Spades = 20.1,20.2,20.3,20.4
