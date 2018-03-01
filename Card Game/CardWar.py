@@ -70,6 +70,7 @@ class CardWar:
             if 100+200 > mouse[0] > 100 and 150+50 > mouse[1] > 150:
                 if click[0] == 1:
                     game_start = True
+
                         
             while game_start == True:
                 self.gameDisplay.fill(black)
