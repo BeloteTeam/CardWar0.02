@@ -3,6 +3,7 @@ import tkinter as tk
 import random
 from Deck import Deck
 
+
 white = [255, 255, 255]
 black = [0, 0, 0]
 green = [0, 200, 0]
@@ -33,7 +34,6 @@ class CardWar:
 
         self.clock = pygame.time.Clock()
 
-
         self.gameDisplay.fill(black)
         smallText = pygame.font.Font("freesansbold.ttf", 20)
         textSurf, textRect = text_objects("Click anywhere to start!", smallText)
@@ -52,7 +52,7 @@ class CardWar:
             import time
             game_start = False
 
-            if event.type == pygame.MOUSEBUTTONDOWN:
+            if click[0] == 1:
                 self.gameDisplay.fill(white)
                 pygame.draw.rect(self.gameDisplay, green, (100, 150, 200, 50))
                 smallText = pygame.font.Font("freesansbold.ttf", 20)
@@ -71,14 +71,13 @@ class CardWar:
                 if click[0] == 1:
                     game_start = True
 
-                        
             while game_start == True:
                 self.gameDisplay.fill(black)
                 self.gameDisplay.blit(background, (0, 0))
                 pygame.display.update()
-                for event in pygame.event.get():
-                    if event.type == pygame.QUIT:
-                        quit()
+                pygame.event.get()
+                if event.type == pygame.QUIT:
+                    quit()
                 keys = pygame.key.get_pressed()
                 if keys[pygame.K_ESCAPE]:
                     self.gameDisplay.fill(black)
